@@ -711,8 +711,8 @@ def calculate_makewhole_curve_for_bond(issue_id, df, treasury_provider, step_day
 
 def main_treasury():
 
-    input_file = r"bond_data.csv"
-    treasury_file = r"par-yield-curve-rates-1990-2023.csv"
+    input_file = r"data\bond_data.csv"
+    treasury_file = r"data\par-yield-curve-rates-1990-2023.csv"
 
     try:
         df = pd.read_csv(input_file, low_memory=False)
@@ -959,7 +959,7 @@ def main_treasury():
 
         print(f"\nResults have been saved to: {output_file}")
 
-        # 提示用户可以使用曲线计算功能
+       
         print("\nNote: You can use the following commands to calculate price curves for individual bonds:")
         print(" python MWBPS.py curve <issue_id> - Calculate price curve for any bond")
         print(" python MWBPS.py blendedcurve <issue_id> - Specifically calculate price curve for blended bonds")
